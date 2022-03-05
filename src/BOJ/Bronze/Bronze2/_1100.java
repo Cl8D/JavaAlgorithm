@@ -1,11 +1,10 @@
+package BOJ.Bronze.Bronze2;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
-public class Main {
+public class _1100 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         String[][] chess = new String[8][8];
