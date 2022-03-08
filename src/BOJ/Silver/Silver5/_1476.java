@@ -1,11 +1,11 @@
+package BOJ.Silver.Silver5;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _1476 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         // E 1~15, S 1~28 M 1~19
