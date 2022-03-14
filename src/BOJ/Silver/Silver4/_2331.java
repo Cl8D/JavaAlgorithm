@@ -1,3 +1,5 @@
+package BOJ.Silver.Silver4;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -5,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _2331 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk = new StringTokenizer(buf.readLine());
@@ -45,5 +47,4 @@ public class Main {
         System.out.println(result);
 
     }
-
 }
