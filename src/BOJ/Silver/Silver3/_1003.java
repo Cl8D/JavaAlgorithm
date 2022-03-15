@@ -1,8 +1,10 @@
+package BOJ.Silver.Silver3;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class _1003 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(buf.readLine());
@@ -23,6 +25,7 @@ public class Main {
                 // 그래서 dp로 다시 풀었다...!
                 dp[0][0] = 1;
                 dp[0][1] = 0;
+
                 dp[1][0] = 0;
                 dp[1][1] = 1;
 
@@ -66,6 +69,5 @@ public class Main {
             return dp[n];
         }
     }
-         */
-
+    */
 }
