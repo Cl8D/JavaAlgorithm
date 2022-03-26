@@ -1,15 +1,18 @@
+package Programmers.Level2;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
 
-public class Main {
+// 문자열 압축
+public class StringCompression {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         String str = buf.readLine();
 
         int minLength = 1001;
 
+        // 문자의 길이가 1 이상일 때.
         if (str.length() > 1) {
             for (int n = 1; n < str.length() / 2; n++) {
                 str += " ";
@@ -59,7 +62,5 @@ public class Main {
 
         System.out.println(minLength);
 
-
     }
-
 }

@@ -19,7 +19,7 @@ public class _0111S {
         // 가장 마지막 문자는 그 다음에 아무것도 없어서 인덱스 에러가 날 수 있기 때문에
         // 그냥 빈 문자 하나 넣어주기
         str = str + " ";
-        int count = 0;
+        int count = 1;
 
         // 빈문자를 추가했었으니까 그 전까지만 탐색하도록
         for(int i=0; i<str.length()-1; i++) {
