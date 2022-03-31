@@ -1,9 +1,12 @@
+package BOJ.Silver.Silver1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Main {
+public class _9020 {
     // 에라토스테네스의 체
 
     public static void main(String[] args) throws IOException {
