@@ -1,9 +1,11 @@
+package Inflearn.array;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
 
-public class Main {
+// 5. 소수 (에라토스테네스 체)
+public class _0205 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(buf.readLine());
@@ -37,5 +39,4 @@ public class Main {
         System.out.println(count);
 
     }
-
 }
