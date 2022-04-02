@@ -1,8 +1,12 @@
+package Inflearn.twopointers;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class Main {
+// 6. 최대 길이 연속부분수얼 - 솔루션 코드 참고
+public class _0306 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk;
@@ -40,6 +44,5 @@ public class Main {
 
         }
         System.out.println(result);
-
     }
 }
