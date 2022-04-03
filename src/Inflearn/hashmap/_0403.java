@@ -1,8 +1,12 @@
+package Inflearn.hashmap;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+// 3. 매출액의 종류
+public class _0403 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk;
@@ -47,7 +51,6 @@ public class Main {
 
         for(int a : answer)
             System.out.print(a + " ");
-
 
 
     }
