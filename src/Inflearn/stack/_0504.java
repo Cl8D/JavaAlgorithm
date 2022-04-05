@@ -1,8 +1,13 @@
+package Inflearn.stack;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
-public class Main {
+// 4. 후위식 연산 (postfix)
+public class _0504 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk;
@@ -36,5 +41,4 @@ public class Main {
         System.out.println(result);
 
     }
-
 }
