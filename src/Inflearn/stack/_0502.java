@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+// 2. 괄호 문자 제거
 public class _0502 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
