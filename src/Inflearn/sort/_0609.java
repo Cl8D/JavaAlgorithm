@@ -1,8 +1,13 @@
+package Inflearn.sort;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
-public class Main {
+// 9. 뮤직비디오 - 솔루션 코드 보면서 풀었음.
+public class _0609 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk;
@@ -75,4 +80,3 @@ public class Main {
         return cnt;
     }
 }
-
