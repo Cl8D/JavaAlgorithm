@@ -1,8 +1,12 @@
+package Inflearn.dfs;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class Main {
+// 10. 경로 탐색(dfs)
+public class _0710 {
     static int[][] graph;
     static boolean[] visited;
     static int n;
@@ -45,3 +49,4 @@ public class Main {
         }
     }
 }
+
