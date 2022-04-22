@@ -1,8 +1,15 @@
+package Inflearn.dfs;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
-public class Main {
+// 12. 그래프 최단거리 (BFS)
+public class _0712 {
     static ArrayList<ArrayList<Integer>> graph;
     static boolean[] visited;
     static int[] distance;
@@ -46,7 +53,7 @@ public class Main {
         while(!queue.isEmpty()) {
             int current = queue.poll();
             for(int vertex : graph.get(current)) {
-               if(visited[vertex] == false) {
+                if(visited[vertex] == false) {
                     visited[vertex]= true;
                     queue.add(vertex);
                     distance[vertex] = distance[current]+1;
