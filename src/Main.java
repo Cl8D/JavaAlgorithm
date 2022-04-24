@@ -3,57 +3,27 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    static ArrayList<ArrayList<Integer>> graph;
-    static boolean[] visited;
-    static int[] distance;
+    static int n, m;
 
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk;
         stk = new StringTokenizer(buf.readLine());
 
-        int n = Integer.parseInt(stk.nextToken());
-        int m = Integer.parseInt(stk.nextToken());
+        // 1~n까지 적힌 구슬에서 중복 허락, m번 뽑아서 일렬 나열
+        n = Integer.parseInt(stk.nextToken());
+        m = Integer.parseInt(stk.nextToken());
 
-        graph = new ArrayList<ArrayList<Integer>>();
-
-        for(int i=0; i<=n; i++)
-            graph.add(new ArrayList<Integer>());
-
-        visited = new boolean[n+1];
-        distance = new int[n+1];
-
-        for(int i=0; i<m; i++) {
-            stk = new StringTokenizer(buf.readLine());
-            int a = Integer.parseInt(stk.nextToken());
-            int b = Integer.parseInt(stk.nextToken());
-            graph.get(a).add(b);
-        }
-
-        bfs(1);
-
-        for(int i=2; i<=n; i++)
-            System.out.println(i + " : " + distance[i]);
     }
 
-    static void bfs(int v) {
-        visited[v] = true;
-        distance[v] = 0;
-
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(v);
-
-        while(!queue.isEmpty()) {
-            int current = queue.poll();
-            for(int vertex : graph.get(current)) {
-               if(visited[vertex] == false) {
-                    visited[vertex]= true;
-                    queue.add(vertex);
-                    distance[vertex] = distance[current]+1;
-                }
-            }
+    static void dfs(int val) {
+        if(val == m) {
 
         }
+        else {
+            dfs(val+1)
+        }
     }
+
 
 }
