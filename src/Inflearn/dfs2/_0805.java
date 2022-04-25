@@ -1,8 +1,14 @@
+package Inflearn.dfs2;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.StringTokenizer;
 
-public class Main {
+// 5. 동전교환
+public class _0805 {
     static Integer[] coin;
     static int n, m, result=999;
     static int[] temp;
