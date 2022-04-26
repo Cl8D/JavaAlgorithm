@@ -3,54 +3,29 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    static Integer[] coin;
-    static int n, m, result=999;
-    static int[] temp;
+    static int[][] dp;
 
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stk;
-
-        // 동전의 종류 개수
-        n = Integer.parseInt(buf.readLine());
-
-        coin = new Integer[n];
-
-        // 동전 종류
         stk = new StringTokenizer(buf.readLine());
 
-        for(int i=0; i<n; i++)
-            coin[i] = Integer.parseInt(stk.nextToken());
+        int n = Integer.parseInt(stk.nextToken());
+        int r = Integer.parseInt(stk.nextToken());
 
-        Arrays.sort(coin, Collections.reverseOrder());
+        dp = new int[34][34];
 
-        // 거슬러 줄 금액
-        m = Integer.parseInt(buf.readLine());
-        temp = new int[m];
-        dfs(0, 0);
-        System.out.println(result);
+        System.out.println(dfs(n,r));
     }
 
-    // l -> 동전의 개수
-    // sum -> l개의 동전으로 만든 금액
-    static void dfs(int l, int sum) {
-//        System.out.println("sum = " + sum);
-        if(sum > m)
-            return;
-        if(l >= result)
-            return;
-        if(sum == m) {
-            result = Math.min(result, l);
+    static int dfs(int n, int r) {
+        if(r==n || r==0) {
+            return 1;
         }
-        else {
-            for(int i=0; i<n; i++)
-                dfs(l+1, sum+coin[i]);
-        }
+        if(dp[n][r] > 0)
+            return dp[n][r];
+        else
+            return dp[n][r] = dfs(n-1, r-1) + dfs(n-1, r);
     }
+
 }
-
-/*
-coin 배열에 3개의 값이 있는데,
-level이 증가하면서 각 인덱스의 어느 값을 더 참조할 것인지 뻗어나가는 형식인 느낌.
-인덱스로 뻗어나간다고 생각해야 할 것 같다.
- */
