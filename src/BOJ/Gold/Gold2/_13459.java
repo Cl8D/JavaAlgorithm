@@ -1,11 +1,8 @@
 package BOJ.Gold.Gold2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
-// 구슬 탈출
 public class _13459 {
     static int n, m, answer=0;
     static char[][] board;
@@ -163,3 +160,151 @@ public class _13459 {
 }
 
 
+
+/***********************/
+
+// 잘못된 코드......ㅎ;
+//import java.io.*;
+//import java.util.*;
+//
+//public class Main {
+//    static int n, m, answer=0, count=0;
+//    static char[][] board;
+//    static int[] dx = {0, 0, 1, -1};
+//    static int[] dy = {1, -1, 0, 0};
+//    static Queue<Type> redQueue;
+//    static Queue<Type> blueQueue;
+//
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer stk;
+//        stk = new StringTokenizer(buf.readLine());
+//
+//        n = Integer.parseInt(stk.nextToken());
+//        m = Integer.parseInt(stk.nextToken());
+//
+//        board = new char[n][m];
+//        redQueue = new LinkedList<>();
+//        blueQueue = new LinkedList<>();
+//
+//        for(int i=0; i<n; i++) {
+//            stk = new StringTokenizer(buf.readLine());
+//            board[i] = stk.nextToken().toCharArray();
+//            for(int j=0; j<m; j++) {
+//                if(board[i][j]=='R') {
+//                    redQueue.add(new Type(i, j));
+//                    board[i][j] = '.';
+//                }
+//                else if(board[i][j] =='B') {
+//                    blueQueue.add(new Type(i, j));
+//                    board[i][j] = '.';
+//                }
+//            }
+//        }
+//
+//        bfs();
+//        System.out.println(answer);
+//
+//    }
+//
+//    // https://kkoon9.tistory.com/89
+//    // 이거 참고해서 하고 있었는데 답이 안 나오넹...ㅠ
+//
+//    static void bfs() {
+//        while(!redQueue.isEmpty() && count<10) {
+//            count++;
+//            for(int i=0; i< redQueue.size(); i++) {
+//                Type curRed = redQueue.poll();
+//                Type curBlue = blueQueue.poll();
+//
+//                Type moveRed = null;
+//                Type moveBlue = null;
+//
+//                for (int j = 0; j < dx.length; j++) {
+//                    moveRed = move(curRed.x, curRed.y, dx[j], dy[j]);
+//                    moveBlue = move(curBlue.x, curBlue.y, dx[j], dy[j]);
+//
+//                    if (board[moveRed.x][moveRed.y] == 'O' && board[moveBlue.x][moveBlue.y] != 'O') {
+//                        answer = 1;
+//                        return;
+//                    }
+//                    else if (board[moveRed.x][moveRed.y] != 'O' && board[moveBlue.x][moveBlue.y] == 'O') {
+//                        continue;
+//                    }
+//                    else if (board[moveRed.x][moveRed.y] == 'O' && board[moveBlue.x][moveBlue.y] == 'O') {
+//                        continue;
+//                    }
+//                    else {
+//                        if(moveRed.x == moveBlue.x && moveRed.y == moveBlue.y) {
+//                            if(i==0) {
+//                                if(curRed.y > curBlue.y)
+//                                    moveBlue.y -= 1;
+//                                else
+//                                    moveRed.y -= 1;
+//                            }
+//                            else if(i==1) {
+//                                if(curRed.y < curBlue.y)
+//                                    moveBlue.y += 1;
+//                                else
+//                                    moveRed.y += 1;
+//                            }
+//                            else if(i==2) {
+//                                if(curRed.x > curBlue.x)
+//                                    moveBlue.x -=1;
+//                                else
+//                                    moveRed.x -=1;
+//                            }
+//                            else {
+//                                if(curRed.x < curBlue.x)
+//                                    moveBlue.x += 1;
+//                                else
+//                                    moveRed.x += 1;
+//                            }
+//                        }
+//                    }
+//                }
+//                redQueue.add(moveRed);
+//                blueQueue.add(moveBlue);
+//            }
+//
+//        }
+//
+//    }
+//
+//    static Type move(int x, int y, int dx, int dy) {
+//        Type cur = null;
+//        int nx=0, ny=0;
+//        while(true) {
+//            nx = x + dx;
+//            ny = y + dy;
+//
+//            if(nx>=0 && nx<n && ny>=0 && ny<m) {
+//                // 벽이면 이전 위치로
+//                if (board[nx][ny] == '#') {
+//                    cur = new Type(x, y);
+//                    break;
+//                }
+//                // 구멍이면 이동
+//                else if (board[nx][ny] == 'O') {
+//                    cur = new Type(nx, ny);
+//                    break;
+//                }
+//                x=nx;
+//                y=ny;
+//            }
+//        }
+//        return cur;
+//    }
+//
+//    static class Type {
+//        int x;
+//        int y;
+//
+//        public Type(int x, int y) {
+//            this.x = x;
+//            this.y = y;
+//        }
+//    }
+//}
+//
+//
