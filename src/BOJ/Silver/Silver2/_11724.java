@@ -34,7 +34,7 @@ public class _11724 {
         int count = 0;
         for(int i=1; i<=n; i++) {
             // 각 정점의 방문여부 체크
-            // 하나의 정점에 대해 모두 탐색이 끝났으면 count+1
+            // 하나의 정점에 대해 모두 탐색이 끝났으면 count+1 (시작점부터 방문 확인)
             // 연결되어 있으면 dfs 내에서 방문처리가 되었기 때문에 방문이 되지 않은 것들에 대해서만 새롭게 count+1이 된다.
             if(!visited[i]) {
                 dfs(i);
@@ -49,10 +49,10 @@ public class _11724 {
     static void dfs(int start) {
         visited[start] = true;
 
-        // 각 정점에 대해 재탐색
         for(int i=1; i<=n; i++) {
+            // 방문이 되지 않았으면서, 둘이 연결되어 있다면
             if(!visited[i] && val[start][i] == 1)
-                // 연결된 요소에 대해서 재탐색
+                // 해당 요소를 시작점으로 하여 다시 방문 탐색 시작!
                 dfs(i);
         }
     }
