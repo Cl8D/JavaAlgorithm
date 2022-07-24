@@ -36,7 +36,6 @@ public class _1932 {
         }
 
         buf2.write(answer+"");
-
         buf2.flush();
         buf.close();
         buf2.close();
