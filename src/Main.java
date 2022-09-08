@@ -7,8 +7,6 @@ public class Main {
         BufferedWriter buf2 = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer stk;
 
-
-
         buf.close();
         buf2.close();
     }
