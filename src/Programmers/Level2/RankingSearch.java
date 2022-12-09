@@ -2,11 +2,10 @@ package Programmers.Level2;
 
 import java.util.*;
 
-// 순위 검색
+// 순위 검색 - 100점!
 class RankingSearch {
     private static Map<BaseInfo, List<Integer>> userInfos = new HashMap<>();
     private static StringTokenizer stk;
-
 
     public int[] solution(String[] info, String[] query) {
         int[] answer = new int[query.length];
@@ -32,6 +31,10 @@ class RankingSearch {
             createAllCase(language, course, career, soulFood, score);
         }
 
+        for (BaseInfo userInfo : userInfos.keySet()) {
+            Collections.sort(userInfos.get(userInfo));
+        }
+
         for (String userQuery : query) {
             stk = new StringTokenizer(userQuery);
             String language = getInfo(false);
@@ -42,9 +45,10 @@ class RankingSearch {
 
             BaseInfo standardInfo = new BaseInfo(language, course, career, soulFood);
             List<Integer> standardScores = userInfos.get(standardInfo);
-
-            // 정렬 (오름차순)
-            standardScores.sort(Comparator.naturalOrder());
+            if (standardScores == null) {
+                answer[answerIdx++] = 0;
+                continue;
+            }
             answer[answerIdx++] = findGEScores(standardScores, standardScore);
         }
 
