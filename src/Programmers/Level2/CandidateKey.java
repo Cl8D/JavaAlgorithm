@@ -6,7 +6,8 @@ import java.util.*;
 class CandidateKey {
     private static boolean[] visited;
     private static String[][] relations;
-    private static List<String> values, alreadyUsed;
+    private static List<String> values;
+    private static Set<String> alreadyUsed;
     private static int candidateCount = 0;
 
 
@@ -14,14 +15,7 @@ class CandidateKey {
         int answer = 0;
         relations = relation;
 
-        alreadyUsed = new ArrayList<>();
-
-        for (int i=0; i<relation.length; i++) {
-            String number = relation[i][0];
-            String name = relation[i][1];
-            String major = relation[i][2];
-            String grade = relation[i][3];
-        }
+        alreadyUsed = new HashSet<>();
 
         for (int i=1; i<=relation[0].length; i++) {
             visited = new boolean[relation[0].length];
@@ -44,6 +38,7 @@ class CandidateKey {
             String[] index = indexes.toString().split("");
 
             if (isUniqueKey(index) && isCandidateKey(index)) {
+                System.out.println(Arrays.toString(index));
                 candidateCount++;
             }
             return;
@@ -88,12 +83,20 @@ class CandidateKey {
     private boolean isCandidateKey(String[] index) {
         String idxKey = String.join("", index);
 
+        // https://school.programmers.co.kr/questions/16502
+        // 하나씩 검사하는 건 맞지만, 모든 요소가 포함되는지를 확인해야 된다.
+        // (0),(2,3),(1,3,4) 여기서 자꾸 (2,3)에서 3 포함되면 없애버려서 틀렸다...
         for (String used : alreadyUsed) {
-            if (idxKey.contains(used)){
+            int count = 0;
+            for (int i=0; i<used.length(); i++) {
+                if (idxKey.contains(String.valueOf(used.charAt(i)))) {
+                    count++;
+                }
+            }
+            if(count == used.length()) {
                 return false;
             }
         }
-
         alreadyUsed.add(idxKey);
         return true;
     }
