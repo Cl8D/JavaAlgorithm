@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // 33. Search In Rotated Sorted Array
-class SearchInRotatedSortedArray {
+class _33 {
     public int search(int[] nums, int target) {
         final Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

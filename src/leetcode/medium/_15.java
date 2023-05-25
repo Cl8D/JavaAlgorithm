@@ -2,8 +2,8 @@ package leetcode.medium;
 
 import java.util.*;
 
-// 3Sum
-class _3Sum {
+// 15. 3Sum
+class _15 {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;

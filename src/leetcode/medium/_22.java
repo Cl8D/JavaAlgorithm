@@ -3,8 +3,8 @@ package leetcode.medium;
 import java.util.ArrayList;
 import java.util.List;
 
-// Generate Parentheses
-class GenerateParentheses {
+// 22. Generate Parentheses
+class _22 {
     public List<String> generateParenthesis(int n) {
         List<String> answer = new ArrayList<>();
         dfs(answer, new StringBuilder("("), n - 1, n);

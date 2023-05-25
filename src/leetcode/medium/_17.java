@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-// Letter Combinations of a Phone Number
-public class LetterCombinationsPhoneNumber {
+// 17. Letter Combinations of a Phone Number
+public class _17 {
     private static final String[] letters = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     public List<String> letterCombinations(String digits) {

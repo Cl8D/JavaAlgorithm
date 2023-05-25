@@ -3,7 +3,7 @@ package leetcode.medium;
 import java.util.*;
 
 // 56. Merge Intervals
-class MergeIntervals {
+class _56 {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (o1, o2) -> {
             if (o1[0] == o2[0]) {

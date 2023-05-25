@@ -2,7 +2,7 @@ package leetcode.medium;
 
 // 62. Unique Paths
 // 다시 풀어봐도 좋을 것 같다.
-class UniquePaths {
+class _62 {
 
     public int uniquePaths(int m, int n) {
         int[][] map = new int[m][n];

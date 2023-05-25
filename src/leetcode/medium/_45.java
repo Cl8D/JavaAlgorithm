@@ -1,7 +1,7 @@
 package leetcode.medium;
 
-
-class JumpGame2 {
+// 45. Jump Game II
+class _45 {
     public int jump(int[] nums) {
         // 현재 위치까지 해서 가장 멀리 이동할 수 있는 위치
         int max = 0;

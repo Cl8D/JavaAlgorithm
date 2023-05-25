@@ -1,7 +1,7 @@
 package leetcode.medium;
 
 // 53. Maximum Subarray
-class MaximumSubArray {
+class _53 {
     public int maxSubArray(int[] nums) {
         // 카데인 알고리즘
         int[] dp = new int[nums.length];

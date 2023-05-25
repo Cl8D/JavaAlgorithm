@@ -10,7 +10,9 @@ package leetcode.medium;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class AddTwoNumbers {
+
+// 2. Add Two Numbers
+class _2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode root = new ListNode();
         ListNode current = root;

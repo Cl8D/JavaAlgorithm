@@ -3,7 +3,7 @@ package leetcode.medium;
 import java.util.*;
 
 // 46. Permutations
-class Permutations {
+class _46 {
 
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> answer = new ArrayList<>();

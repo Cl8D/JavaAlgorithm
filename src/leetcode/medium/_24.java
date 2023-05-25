@@ -12,7 +12,7 @@ package leetcode.medium;
  */
 
 // 24. swap nodes in pairs
-class SwapNodesInPairs {
+class _24 {
 
     public static void main(String[] args) {
         final ListNode node1 = new ListNode(1);

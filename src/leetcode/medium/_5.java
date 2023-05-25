@@ -1,7 +1,7 @@
 package leetcode.medium;
 
-// Longest Palindromic Substring
-public class LongestPalindromicSub {
+// 5. Longest Palindromic Substring
+public class _5 {
     // 이건 나중에 한 번 더 풀어봐야겠다. 너무 어렵다 ㅠㅠ
     public String longestPalindrome(String s) {
         if (s.isEmpty()) {

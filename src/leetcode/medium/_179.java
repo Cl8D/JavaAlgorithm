@@ -2,8 +2,8 @@ package leetcode.medium;
 
 import java.util.*;
 
-// Largest Number
-class LargestNumber {
+// 179. Largest Number
+class _179 {
     public String largestNumber(int[] nums) {
         List<String> list = new ArrayList<>();
         for (int num : nums) {

@@ -3,12 +3,12 @@ package leetcode.medium;
 import java.util.*;
 
 // 146. LRU Cache
-class LRUCache {
+class _146 {
 
     private final int initCapacity;
     private final Map<Integer, Integer> map;
 
-    public LRUCache(int capacity) {
+    public _146(int capacity) {
         initCapacity = capacity;
         // linkedHashMap에서는 내부적으로 accessOrder라는 값을 받아서 접근 빈도에 따라 순서가 변경되도록 할 수 있다.
         // load factor는 해시 테이블의 버킷이 얼마나 가득찼는지 보여주는 값인데 디폴트가 0.75당

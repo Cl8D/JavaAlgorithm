@@ -2,8 +2,8 @@ package leetcode.medium;
 
 import java.util.*;
 
-// Longest Consecutive Sequence
-class LongestConsecutiveSequence {
+// 128. Longest Consecutive Sequence
+class _128 {
     public int longestConsecutive(int[] nums) {
         if (nums.length < 2) {
             return nums.length;

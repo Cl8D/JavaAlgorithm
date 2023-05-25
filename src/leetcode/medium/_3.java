@@ -3,7 +3,8 @@ package leetcode.medium;
 import java.util.HashMap;
 import java.util.Map;
 
-class LongestSubstringWithoutRepeating {
+// 3. Longest Substring Without Repeating Characters
+class _3 {
     public int lengthOfLongestSubstring(String s) {
         // 마지막으로 등장한 인덱스 저장
         Map<Character, Integer> map = new HashMap<>();

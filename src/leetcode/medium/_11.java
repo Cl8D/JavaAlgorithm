@@ -1,7 +1,7 @@
 package leetcode.medium;
 
-// Container With Most Water
-class ContainerWithMostWater {
+// 11. Container With Most Water
+class _11 {
 
     public int maxArea(int[] height) {
         int left = 0, right = height.length - 1;
